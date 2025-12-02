@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | MEHARWADE EVENTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Meharwade Events</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="contact-box">
+    <h1 class="gold" style="font-size:50px;">Book Us</h1>
+
+    <!-- ⭐ FORM STARTS HERE -->
+    <form onsubmit="sendWhatsAppMessage(); return false;">
+        <input id="name" type="text" placeholder="Your Name" required>
+        <input id="phone" type="text" placeholder="Phone Number" required>
+        <textarea id="msg" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <!-- ⭐ FORM ENDS HERE -->
+</div>
+
+<footer>© 2025 Meharwade Events • All Rights Reserved</footer>
+
+<!-- ⭐ PUT THIS SCRIPT AT THE END JUST BEFORE </body> -->
+<script>
+function sendWhatsAppMessage() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let msg = document.getElementById("msg").value;
+
+    // ⭐ REPLACE WITH YOUR OWN WHATSAPP NUMBER
+    let whatsappNumber = "918217363713";
+
+    let url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        "*New Booking Enquiry*%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Message: " + msg;
+
+    window.open(url, "_blank");
+}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+</body>
+</html>
